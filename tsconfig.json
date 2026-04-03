@@ -1,0 +1,28 @@
+﻿{
+    "include":  [
+                    "src",
+                    "tests"
+                ],
+    "exclude":  [
+                    "dist",
+                    "node_modules"
+                ],
+    "compilerOptions":  {
+                            "outDir":  "dist",
+                            "lib":  [
+                                        "ES2022",
+                                        "DOM"
+                                    ],
+                            "moduleResolution":  "NodeNext",
+                            "declaration":  true,
+                            "jsx":  "react-jsx",
+                            "rootDir":  ".",
+                            "strict":  true,
+                            "target":  "ES2022",
+                            "skipLibCheck":  true,
+                            "module":  "NodeNext",
+                            "declarationMap":  true,
+                            "sourceMap":  true
+                        }
+}
+

@@ -1,0 +1,48 @@
+{
+  "scripts": {
+    "build:rollup": "rollup -c",
+    "build": "node ./esbuild.config.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --config ./vitest.config.ts",
+    "dev:ui": "paperclip-plugin-dev-server --root . --ui-dir dist/ui --port 4177",
+    "dev": "node ./esbuild.config.mjs --watch",
+    "plugin:build": "node ./esbuild.config.mjs",
+    "plugin:build:rollup": "rollup -c",
+    "plugin:dev": "node ./esbuild.config.mjs --watch",
+    "plugin:dev:ui": "paperclip-plugin-dev-server --root . --ui-dir dist/ui --port 4177",
+    "plugin:test": "vitest run --config ./vitest.plugin.config.ts",
+    "plugin:typecheck": "tsc --noEmit -p ./tsconfig.plugin.json"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "description": "uos-tool-trawl-web-extraction plugin",
+  "type": "module",
+  "paperclipPlugin": {
+    "worker": "./dist/worker.js",
+    "ui": "./dist/ui/",
+    "manifest": "./dist/manifest.js"
+  },
+  "version": "0.1.0",
+  "author": "turmo.dev",
+  "name": "uos-tool-trawl-web-extraction",
+  "private": true,
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^4.38.0",
+    "tslib": "^2.8.1",
+    "vitest": "^3.0.5",
+    "@types/node": "^24.6.0",
+    "@paperclipai/plugin-sdk": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3",
+    "esbuild": "^0.27.3"
+  },
+  "license": "MIT",
+  "keywords": [
+    "paperclip",
+    "plugin",
+    "automation"
+  ]
+}
