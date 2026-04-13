@@ -8,7 +8,7 @@ export interface VersionedData {
   version: number;
 }
 
-interface VersionEntry {
+export interface VersionEntry {
   data: unknown;
   checksum: string;
   timestamp: Date;
