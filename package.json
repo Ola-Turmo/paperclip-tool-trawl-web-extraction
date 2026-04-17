@@ -16,7 +16,7 @@
   "peerDependencies": {
     "react": ">=18"
   },
-  "description": "uos-tool-trawl-web-extraction plugin",
+  "description": "Structured web-extraction tool plugin with schema, provenance, and drift awareness.",
   "type": "module",
   "paperclipPlugin": {
     "worker": "./dist/worker.js",
@@ -43,6 +43,9 @@
   "keywords": [
     "paperclip",
     "plugin",
-    "automation"
+    "automation",
+    "uos",
+    "tool-plugin",
+    "web-extraction"
   ]
 }
