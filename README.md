@@ -1,6 +1,6 @@
 # Trawl Web Extraction
 
-trawl-web-extraction provides structured web extraction with an emphasis on schema fidelity, resilience to page changes, and trust-aware output generation.
+trawl-web-extraction is a narrow UOS tool plugin for structured web extraction. It owns schema-guided extraction, provenance, trust scoring, and source-drift handling. It does not own the generic connector boundary or broader automation routing across unrelated tools.
 
 Built as part of the UOS split workspace on top of [Paperclip](https://github.com/paperclipai/paperclip), which remains the upstream control-plane substrate.
 
@@ -8,12 +8,12 @@ Built as part of the UOS split workspace on top of [Paperclip](https://github.co
 
 - Schema-guided extraction and normalization.
 - Source provenance, trust scoring, and confidence handling.
-- Resilience to DOM/layout changes and fallback strategies.
-- Quality evaluation and drift detection.
+- Resilience to DOM or layout changes and fallback strategies.
+- Quality evaluation and drift detection for extraction targets.
 
 ## Runtime Form
 
-- The Paperclip plugin scaffold is the primary delivery surface; extraction schemas, provenance, and downstream delivery workflows should strengthen that runtime rather than replace it.
+- Tool plugin first. Extraction schemas, provenance, and downstream delivery workflows should strengthen targeted extraction jobs without becoming a generic connector or automation surface.
 
 ## Highest-Value Workflows
 
