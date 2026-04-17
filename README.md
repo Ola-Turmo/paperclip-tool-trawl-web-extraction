@@ -4,6 +4,13 @@ trawl-web-extraction is a narrow UOS tool plugin for structured web extraction. 
 
 Built as part of the UOS split workspace on top of [Paperclip](https://github.com/paperclipai/paperclip), which remains the upstream control-plane substrate.
 
+## Boundary Summary
+
+- Owns schema-guided extraction, provenance, trust scoring, and extraction-target drift handling.
+- Depends on [uos-plugin-connectors](https://github.com/Ola-Turmo/uos-plugin-connectors) only when provider auth or callback plumbing is required around extraction jobs.
+- Feeds extraction quality and provenance evidence into [uos-plugin-operations-cockpit](https://github.com/Ola-Turmo/uos-plugin-operations-cockpit) when operators need reviewable signals.
+- Stays narrower than the generic connector layer and narrower than the broader task-routing plugin.
+
 ## What This Repo Owns
 
 - Schema-guided extraction and normalization.
