@@ -1,4 +1,4 @@
-﻿import type { PaperclipPluginManifestV1 } from "@paperclipai/plugin-sdk";
+import type { PaperclipPluginManifestV1 } from "@paperclipai/plugin-sdk";
 
 const manifest: PaperclipPluginManifestV1 = {
   id: "uos-tool-trawl-web-extraction",
@@ -11,7 +11,8 @@ const manifest: PaperclipPluginManifestV1 = {
   capabilities: [
     "events.subscribe",
     "plugin.state.read",
-    "plugin.state.write"
+    "plugin.state.write",
+    "ui.dashboardWidget.register"
   ],
   entrypoints: {
     worker: "./dist/worker.js",
